@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combos - Royal Biryani House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍲 Royal Biryani House</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="veg.html">Veg</a></li>
+        <li><a href="nonveg.html">Non-Veg</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="combos.html" class="active">Combos</a></li>
+        <li><a href="#" id="cart-button">Cart 🛒 <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products">
+    <article>
+      <img src="./images/Royal biriyanincombo.jpg" alt="Veg & Chicken Combo">
+      <h3>Veg & Chicken Combo</h3>
+      <p>Half veg biryani, half chicken biryani plate.</p>
+      <button class="add-btn" data-name="Veg & Chicken Combo" data-price="420">Add to Cart</button>
+    </article>
+    <article>
+      <img src="./images/FamilyCOmbo" alt="Family Combo">
+      <h3>Family Combo</h3>
+      <p>Large portion for 4-5 people.</p>
+      <button class="add-btn" data-name="Family Combo" data-price="700">Add to Cart</button>
+    </article>
+  </section>
+
+  <div class="cart-modal" id="cart-modal">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total">Total: ₹0</p>
+    <textarea id="address" rows="3" placeholder="Enter delivery address..."></textarea>
+    <div class="cart-actions">
+      <button id="place-order">Place Order</button>
+      <button id="clear-cart">Clear Cart</button>
+    </div>
+    <p id="order-message"></p>
+    <button id="close-cart">Close</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Royal Biryani House. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+  <!-- Toast Notification -->
+<div id="toast">Added to Cart!</div>
+
+</body>
+</html>

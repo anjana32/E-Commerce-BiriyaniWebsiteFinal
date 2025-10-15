@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non-Veg Biryani - Royal Biryani House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍲 Royal Biryani House</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="veg.html">Veg</a></li>
+        <li><a href="nonveg.html" class="active">Non-Veg</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="combos.html">Combos</a></li>
+        <li><a href="#" id="cart-button">Cart 🛒 <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products">
+    <article>
+      <img src="./images/MattonBiriyani.jpg" alt="Mutton Biryani">
+      <h3>Mutton Biryani</h3>
+      <p>Royal biryani with juicy mutton pieces.</p>
+      <button class="add-btn" data-name="Mutton Biryani" data-price="300">Add to Cart</button>
+    </article>
+    <article>
+      <img src="./images/Prawn image.jpg" alt="Prawn Biryani">
+      <h3>Prawn Biryani</h3>
+      <p>Spicy coastal prawns with aromatic rice.</p>
+      <button class="add-btn" data-name="Prawn Biryani" data-price="290">Add to Cart</button>
+    </article>
+    <article>
+      <img src="./images/ChickenBiriyani.jpg" alt="Chicken Biryani">
+      <h3>Chicken Biryani</h3>
+      <p>Layered biryani with tender chicken pieces.</p>
+      <button class="add-btn" data-name="Chicken Biryani" data-price="250">Add to Cart</button>
+    </article>
+  </section>
+
+  <div class="cart-modal" id="cart-modal">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total">Total: ₹0</p>
+    <textarea id="address" rows="3" placeholder="Enter delivery address..."></textarea>
+    <div class="cart-actions">
+      <button id="place-order">Place Order</button>
+      <button id="clear-cart">Clear Cart</button>
+    </div>
+    <p id="order-message"></p>
+    <button id="close-cart">Close</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Royal Biryani House. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+  <!-- Toast Notification -->
+<div id="toast">Added to Cart!</div>
+
+</body>
+</html>

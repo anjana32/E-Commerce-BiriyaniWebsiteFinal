@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Biryani House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🍲 Royal Biryani House</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="veg.html">Veg</a></li>
+        <li><a href="nonveg.html">Non-Veg</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="combos.html">Combos</a></li>
+        <li><a href="#" id="cart-button">Cart 🛒 <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Animated Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <h2>Royal Flavors of India</h2>
+    <p>Discover the best biryanis from every corner of India!</p>
+  </section>
+
+  <!-- Top Picks Scroll -->
+  <section class="top-picks">
+    <h2>🔥 Top Picks</h2>
+    <div class="scroll-container">
+      <div class="dish"><img src="./images/chicken-hyderabadi-biryani-01-768x768.jpg" alt=""><p>Hyderabadi Biryani</p></div>
+      <div class="dish"><img src="./images/Ambooru biriyani" alt=""><p>Ambur Biryani</p></div>
+      <div class="dish"><img src="./images/Malabar.jpg" alt=""><p>Malabar Biryani</p></div>
+      <div class="dish"><img src="./images/VegBiriyani" alt=""><p>Veg Dum Biryani</p></div>
+      <div class="dish"><img src="./images/Prawn image.jpg" alt=""><p>Prawn Biryani</p></div>
+      <div class="dish"><img src="./images/MattonBiriyani.jpg" alt=""><p>Mutton Biryani</p></div>
+       <div class="dish"><img src="./images/chicken-hyderabadi-biryani-01-768x768.jpg" alt=""><p>Hyderabadi Biryani</p></div>
+      <div class="dish"><img src="./images/Ambooru biriyani" alt=""><p>Ambur Biryani</p></div>
+      <div class="dish"><img src="./images/Malabar.jpg" alt=""><p>Malabar Biryani</p></div>
+    </div>
+  </section>
+
+  <!-- More Dishes -->
+  <section class="products">
+    <article>
+      <img src="./images/ChefSpecialBiriyani" alt="Lucknowi Biryani">
+      <h3>Lucknowi Biryani</h3>
+      <p>Subtle and aromatic Awadhi delight.</p>
+      <button class="add-btn" data-name="Lucknowi Biryani" data-price="220">Add to Cart</button>
+    </article>
+
+    <article>
+      <img src="./images/chicken-hyderabadi-biryani-01-768x768.jpg" alt="Hyderabadi Biryani">
+      <h3>Hyderabadi Biryani</h3>
+      <p>Spicy, layered with saffron.</p>
+      <button class="add-btn" data-name="Hyderabadi Biryani" data-price="250">Add to Cart</button>
+    </article>
+
+    <article>
+      <img src="./images/Malabar.jpg" alt="Malabar Biryani">
+      <h3>Malabar Biryani</h3>
+      <p>Kerala ghee-rich biryani.</p>
+      <button class="add-btn" data-name="Malabar Biryani" data-price="260">Add to Cart</button>
+    </article>
+
+    <article>
+      <img src="./images/VegBiriyani" alt="Veg Dum Biryani">
+      <h3>Veg Dum Biryani</h3>
+      <p>Loaded with vegetables and aroma.</p>
+      <button class="add-btn" data-name="Veg Dum Biryani" data-price="190">Add to Cart</button>
+    </article>
+
+    <article>
+      <img src="./images/Prawn image.jpg" alt="Prawn Biryani">
+      <h3>Prawn Biryani</h3>
+      <p>Coastal special with prawns.</p>
+      <button class="add-btn" data-name="Prawn Biryani" data-price="290">Add to Cart</button>
+    </article>
+
+    <article>
+      <img src="./images/MattonBiriyani.jpg" alt="Mutton Biryani">
+      <h3>Mutton Biryani</h3>
+      <p>Royal and rich with mutton pieces.</p>
+      <button class="add-btn" data-name="Mutton Biryani" data-price="300">Add to Cart</button>
+    </article>
+  </section>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cart-modal">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total">Total: ₹0</p>
+
+    <textarea id="address" rows="3" placeholder="Enter delivery address..."></textarea>
+    <div class="cart-actions">
+      <button id="place-order">Place Order</button>
+      <button id="clear-cart">Clear Cart</button>
+    </div>
+    <p id="order-message"></p>
+    <button id="close-cart">Close</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Royal Biryani House. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Toast Notification -->
+<div id="toast">Added to Cart!</div>
+
+</body>
+</html>

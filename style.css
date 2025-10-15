@@ -1,0 +1,118 @@
+/* General */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #121212;
+  color: #f1f1f1;
+}
+
+/* Header */
+header {
+  background: #000;
+  color: #ffd60a;
+  text-align: center;
+  padding: 1rem 0;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  flex-wrap: wrap;
+}
+nav li { margin: 5px 12px; }
+nav a { color: #ffd60a; text-decoration: none; font-weight: 600; padding: 4px 8px; transition: 0.3s; }
+nav a:hover, nav a.active { color: #000; background: #ffd60a; border-radius: 5px; }
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #1a1a1a, #000);
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,214,10,0.2) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  z-index: 0;
+}
+.hero h2, .hero p {
+  position: relative;
+  z-index: 1;
+}
+.hero h2 { color: #ffd60a; font-size: 2.5rem; margin-bottom: 0.5rem; }
+.hero p { color: #ccc; font-size: 1.2rem; }
+
+@keyframes rotate {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+/* Top Picks Scroll */
+.top-picks { padding: 1.5rem; }
+.top-picks h2 { color: #ffd60a; text-align: center; margin-bottom: 1rem; }
+.scroll-container { display: flex; overflow-x: auto; gap: 1rem; scroll-behavior: smooth; padding-bottom: 10px; }
+.scroll-container::-webkit-scrollbar { height: 6px; }
+.scroll-container::-webkit-scrollbar-thumb { background: #ffd60a; border-radius: 5px; }
+.dish { background: #1f1f1f; flex: 0 0 auto; border-radius: 10px; width: 180px; text-align: center; box-shadow: 0 2px 8px rgba(255,214,10,0.2); }
+.dish img { width: 100%; height: 110px; border-radius: 10px 10px 0 0; object-fit: cover; }
+.dish p { color: #ffd60a; font-size: 0.9rem; padding: 6px; }
+
+/* Products */
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; padding: 2rem; max-width: 1200px; margin: 0 auto; }
+.products article { background: #1f1f1f; border-radius: 10px; text-align: center; padding: 0.8rem; box-shadow: 0 3px 8px rgba(0,0,0,0.4); transition: transform 0.3s, box-shadow 0.3s; }
+.products article:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(255,214,10,0.3); }
+.products img { width: 100%; height: 130px; object-fit: cover; border-radius: 8px; }
+.products h3 { color: #ffd60a; margin: 0.5rem 0 0.3rem; font-size: 1rem; }
+.products p { color: #bbb; font-size: 0.85rem; }
+.add-btn { background: linear-gradient(90deg,#ffd60a,#ffb703); border:none; padding:8px 12px; border-radius:18px; font-weight:bold; cursor:pointer; color:#000; font-size:0.9rem; }
+.add-btn:hover { background: #ffcd29; }
+
+/* Cart Modal */
+.cart-modal { display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#1f1f1f; padding:2rem; border-radius:12px; width:90%; max-width:400px; box-shadow:0 5px 20px rgba(255,214,10,0.5); z-index:10; }
+.cart-modal h2 { color:#ffd60a; margin-bottom:1rem; text-align:center; }
+.cart-modal ul { list-style:none; padding:0; margin-bottom:1rem; max-height:200px; overflow-y:auto; }
+.cart-modal li { background:#000; padding:8px; border-radius:6px; margin-bottom:6px; display:flex; justify-content:space-between; }
+.cart-modal textarea { width:100%; padding:8px; margin-bottom:10px; border-radius:8px; border:2px solid #ffd60a; background:#121212; color:#fff; resize:none; }
+.cart-actions { display:flex; justify-content:space-between; }
+.cart-actions button { padding:8px 12px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; }
+#place-order { background: linear-gradient(90deg,#ffd60a,#ffb703); color:#000; }
+#place-order:hover { background:#ffcd29; }
+#clear-cart { background:#333; color:#ffd60a; }
+#clear-cart:hover { background:#555; }
+#order-message { margin-top:1rem; font-weight:bold; text-align:center; }
+#close-cart { margin-top:10px; background:#000; color:#ffd60a; width:100%; border-radius:6px; }
+
+#toast {
+  visibility: hidden;
+  min-width: 200px;
+  background-color: #ffd60a;
+  color: #000;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Footer */
+footer { background:#000; color:#ffd60a; text-align:center; padding:1rem; }

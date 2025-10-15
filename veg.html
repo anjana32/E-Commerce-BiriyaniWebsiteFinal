@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veg Biryani - Royal Biryani House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍲 Royal Biryani House</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="veg.html" class="active">Veg</a></li>
+        <li><a href="nonveg.html">Non-Veg</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="combos.html">Combos</a></li>
+        <li><a href="#" id="cart-button">Cart 🛒 <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products">
+    <article>
+      <img src="./images/VegBiriyani" alt="Veg Dum Biryani">
+      <h3>Veg Dum Biryani</h3>
+      <p>Layered rice with fresh vegetables.</p>
+      <button class="add-btn" data-name="Veg Dum Biryani" data-price="190">Add to Cart</button>
+    </article>
+    <article>
+      <img src="./images/Panneerr.jpg" alt="Paneer Biryani">
+      <h3>Paneer Biryani</h3>
+      <p>Delicious paneer with aromatic rice.</p>
+      <button class="add-btn" data-name="Paneer Biryani" data-price="210">Add to Cart</button>
+    </article>
+    <article>
+      <img src="./images/Mushroom.jpg" alt="Mushroom Biryani">
+      <h3>Mushroom Biryani</h3>
+      <p>Rich mushroom biryani with spices.</p>
+      <button class="add-btn" data-name="Mushroom Biryani" data-price="200">Add to Cart</button>
+    </article>
+  </section>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cart-modal">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total">Total: ₹0</p>
+    <textarea id="address" rows="3" placeholder="Enter delivery address..."></textarea>
+    <div class="cart-actions">
+      <button id="place-order">Place Order</button>
+      <button id="clear-cart">Clear Cart</button>
+    </div>
+    <p id="order-message"></p>
+    <button id="close-cart">Close</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Royal Biryani House. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
